@@ -64,8 +64,17 @@
    * Update page content from CONFIG
    */
   function updatePageContent() {
-    // Update page title
-    document.title = `${CONFIG.APP_NAME} - AI-Powered Identification`;
+    // Determine page type and set appropriate title
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    let pageTitle = `${CONFIG.APP_NAME} - AI-Powered Identification`;
+    
+    if (currentPage === 'terms.html') {
+      pageTitle = `Terms of Service - ${CONFIG.APP_NAME}`;
+    } else if (currentPage === 'privacy.html') {
+      pageTitle = `Privacy Policy - ${CONFIG.APP_NAME}`;
+    }
+    
+    document.title = pageTitle;
 
     // Update app name in header
     const appNameElement = document.getElementById('app-name');
@@ -86,11 +95,18 @@
       logoElement.alt = `${CONFIG.APP_NAME} Logo`;
     }
 
-    // Update contact link
+    // Update contact link in footer
     const contactLink = document.getElementById('contact-link');
     if (contactLink && CONFIG.CONTACT_EMAIL) {
       contactLink.href = `mailto:${CONFIG.CONTACT_EMAIL}`;
       contactLink.textContent = 'Contact Us';
+    }
+
+    // Update contact email link in legal content (if exists)
+    const contactEmailLink = document.getElementById('contact-email-link');
+    if (contactEmailLink && CONFIG.CONTACT_EMAIL) {
+      contactEmailLink.href = `mailto:${CONFIG.CONTACT_EMAIL}`;
+      contactEmailLink.textContent = CONFIG.CONTACT_EMAIL;
     }
 
     // Update terms link

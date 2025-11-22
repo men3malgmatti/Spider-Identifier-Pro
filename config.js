@@ -15,8 +15,8 @@ const CONFIG = {
   
   // Contact & Legal Links
   CONTACT_EMAIL: 'support@example.com',
-  PRIVACY_POLICY_URL: 'https://example.com/privacy',
-  TERMS_OF_SERVICE_URL: 'https://example.com/terms',
+  PRIVACY_POLICY_URL: 'privacy.html',
+  TERMS_OF_SERVICE_URL: 'terms.html',
   
   // Color Scheme - Update to match your app's theme
   COLORS: {
