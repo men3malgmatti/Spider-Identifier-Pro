@@ -10,11 +10,11 @@
 
 const CONFIG = {
   // App Information
-  APP_NAME: 'Spider Identifier',
+  APP_NAME: 'Spider Identifier Pro',
   LOGO_PATH: 'assets/logo.png',
   
   // Contact & Legal Links
-  CONTACT_EMAIL: 'support@example.com',
+  CONTACT_EMAIL: 'monem.dakheel@gmail.com',
   PRIVACY_POLICY_URL: 'privacy.html',
   TERMS_OF_SERVICE_URL: 'terms.html',
   
