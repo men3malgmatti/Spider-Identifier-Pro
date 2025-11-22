@@ -102,11 +102,19 @@
       contactLink.textContent = 'Contact Us';
     }
 
-    // Update contact email link in legal content (if exists)
-    const contactEmailLink = document.getElementById('contact-email-link');
-    if (contactEmailLink && CONFIG.CONTACT_EMAIL) {
-      contactEmailLink.href = `mailto:${CONFIG.CONTACT_EMAIL}`;
-      contactEmailLink.textContent = CONFIG.CONTACT_EMAIL;
+    // Update contact email links in legal content (if exists)
+    const contactEmailLinks = document.querySelectorAll('[id^="contact-email-link"]');
+    contactEmailLinks.forEach(link => {
+      if (CONFIG.CONTACT_EMAIL) {
+        link.href = `mailto:${CONFIG.CONTACT_EMAIL}`;
+        link.textContent = CONFIG.CONTACT_EMAIL;
+      }
+    });
+
+    // Update app name inline in privacy policy
+    const appNameInline = document.getElementById('app-name-inline');
+    if (appNameInline) {
+      appNameInline.textContent = CONFIG.APP_NAME;
     }
 
     // Update terms link
