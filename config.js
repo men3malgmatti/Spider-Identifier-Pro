@@ -11,7 +11,7 @@
 const CONFIG = {
   // App Information
   APP_NAME: 'Spider Identifier Pro',
-  LOGO_PATH: 'assets/logo.png',
+  LOGO_PATH: 'assets/logo-new.png',
   
   // Contact & Legal Links
   CONTACT_EMAIL: 'monem.dakheel@gmail.com',
